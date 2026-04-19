@@ -1,0 +1,3445 @@
+{
+  "type": "root",
+  "tag": null,
+  "attrs": {},
+  "children": [
+    {
+      "type": "node",
+      "tag": "s:Envelope",
+      "attrs": {
+        "xmlns:s": "http://www.w3.org/2003/05/soap-envelope",
+        "xmlns:e": "http://www.w3.org/2003/05/soap-encoding",
+        "xmlns:wsa": "http://www.w3.org/2005/08/addressing",
+        "xmlns:xs": "http://www.w3.org/2001/XMLSchema",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xmlns:wsaw": "http://www.w3.org/2006/05/addressing/wsdl",
+        "xmlns:wsnt": "http://docs.oasis-open.org/wsn/b-2",
+        "xmlns:wstop": "http://docs.oasis-open.org/wsn/t-1",
+        "xmlns:wsntw": "http://docs.oasis-open.org/wsn/bw-2",
+        "xmlns:wsrf-rw": "http://docs.oasis-open.org/wsrf/rw-2",
+        "xmlns:wsrf-r": "http://docs.oasis-open.org/wsrf/r-2",
+        "xmlns:wsrf-bf": "http://docs.oasis-open.org/wsrf/bf-2",
+        "xmlns:wsdl": "http://schemas.xmlsoap.org/wsdl",
+        "xmlns:wsoap12": "http://schemas.xmlsoap.org/wsdl/soap12",
+        "xmlns:http": "http://schemas.xmlsoap.org/wsdl/http",
+        "xmlns:d": "http://schemas.xmlsoap.org/ws/2005/04/discovery",
+        "xmlns:wsadis": "http://schemas.xmlsoap.org/ws/2004/08/addressing",
+        "xmlns:tt": "http://www.onvif.org/ver10/schema",
+        "xmlns:tns1": "http://www.onvif.org/ver10/topics",
+        "xmlns:tds": "http://www.onvif.org/ver10/device/wsdl",
+        "xmlns:trt": "http://www.onvif.org/ver10/media/wsdl",
+        "xmlns:tev": "http://www.onvif.org/ver10/events/wsdl",
+        "xmlns:timg": "http://www.onvif.org/ver20/imaging/wsdl",
+        "xmlns:tst": "http://www.onvif.org/ver10/storage/wsdl",
+        "xmlns:dn": "http://www.onvif.org/ver10/network/wsdl",
+        "xmlns:tr2": "http://www.onvif.org/ver20/media/wsdl",
+        "xmlns:tptz": "http://www.onvif.org/ver20/ptz/wsdl",
+        "xmlns:tan": "http://www.onvif.org/ver20/analytics/wsdl",
+        "xmlns:axt": "http://www.onvif.org/ver20/analytics",
+        "xmlns:tmd": "http://www.onvif.org/ver10/deviceIO/wsdl",
+        "xmlns:ter": "http://www.onvif.org/ver10/error"
+      },
+      "children": [
+        {
+          "type": "node",
+          "tag": "s:Body",
+          "attrs": {},
+          "children": [
+            {
+              "type": "node",
+              "tag": "trt:GetProfilesResponse",
+              "attrs": {},
+              "children": [
+                {
+                  "type": "node",
+                  "tag": "trt:Profiles",
+                  "attrs": {
+                    "fixed": "true",
+                    "token": "000"
+                  },
+                  "children": [
+                    {
+                      "type": "node",
+                      "tag": "tt:Name",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "mainStream"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:VideoSourceConfiguration",
+                      "attrs": {
+                        "token": "V_SRC_000"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "V_SRC_CFG_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:SourceToken",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "V_SRC_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Bounds",
+                          "attrs": {
+                            "height": "1296",
+                            "width": "2304",
+                            "y": "0",
+                            "x": "0"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:AudioSourceConfiguration",
+                      "attrs": {
+                        "token": "A_SRC_CFG_000"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A_SRC_CFG_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:SourceToken",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "AudioSourceToken"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:VideoEncoderConfiguration",
+                      "attrs": {
+                        "token": "000"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "V_ENC_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Encoding",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "H264"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Resolution",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Width",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "2304"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Height",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "1296"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Quality",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:RateControl",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:FrameRateLimit",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "12"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:EncodingInterval",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:BitrateLimit",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "2048"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:H265",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:GovLength",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "48"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:H265Profile",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Main"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Multicast",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Address",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Type",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "IPv4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:IPv4Address",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "239.0.1.0"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Port",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "32002"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:TTL",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "2"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:AutoStart",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "false"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:SessionTimeout",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "PT10S"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:AudioEncoderConfiguration",
+                      "attrs": {
+                        "token": "A_ENC_000"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A_ENC_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Encoding",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "G711"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Bitrate",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "128"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:SampleRate",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "8"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Multicast",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Address",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Type",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "IPv4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:IPv4Address",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "239.0.1.0"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Port",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "32002"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:TTL",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "2"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:AutoStart",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "false"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:SessionTimeout",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "PT10S"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:VideoAnalyticsConfiguration",
+                      "attrs": {
+                        "token": "AnalyticsToken_0"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "VideoAnalytics"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:AnalyticsEngineConfiguration",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:AnalyticsModule",
+                              "attrs": {
+                                "Name": "MyCellMotionModule",
+                                "Type": "tt:CellMotionEngine"
+                              },
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Parameters",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "Sensitivity",
+                                        "Value": "50"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:ElementItem",
+                                      "attrs": {
+                                        "Name": "Layout"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "node",
+                                          "tag": "tt:CellLayout",
+                                          "attrs": {
+                                            "Columns": "7",
+                                            "Rows": "7"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Transformation",
+                                              "attrs": {},
+                                              "children": [
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Translate",
+                                                  "attrs": {
+                                                    "x": "-1.00",
+                                                    "y": "-1.00"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Scale",
+                                                  "attrs": {
+                                                    "x": "0.285714",
+                                                    "y": "0.285714"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:AnalyticsModule",
+                              "attrs": {
+                                "Name": "MyTamperDetecModule",
+                                "Type": "tt:TamperEngine"
+                              },
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Parameters",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "Sensitivity",
+                                        "Value": "0"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:ElementItem",
+                                      "attrs": {
+                                        "Name": "Transformation"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "node",
+                                          "tag": "tt:Transformation",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Translate",
+                                              "attrs": {
+                                                "x": "-1.000000",
+                                                "y": "-1.000000"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Scale",
+                                              "attrs": {
+                                                "x": "0.002841",
+                                                "y": "0.003472"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:ElementItem",
+                                      "attrs": {
+                                        "Name": "Field"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "node",
+                                          "tag": "tt:PolygonConfiguration",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Polygon",
+                                              "attrs": {},
+                                              "children": [
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "0",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "0",
+                                                    "y": "576"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "704",
+                                                    "y": "576"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "704",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:RuleEngineConfiguration",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Rule",
+                              "attrs": {
+                                "Name": "MyMotionDetectorRule",
+                                "Type": "tt:CellMotionDetector"
+                              },
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Parameters",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "MinCount",
+                                        "Value": "5"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "AlarmOnDelay",
+                                        "Value": "100"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "AlarmOffDelay",
+                                        "Value": "100"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "ActiveCells",
+                                        "Value": "+/8AgA=="
+                                      },
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Rule",
+                              "attrs": {
+                                "Name": "MyTamperDetectorRule",
+                                "Type": "tt:TamperDetector"
+                              },
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Parameters",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:ElementItem",
+                                      "attrs": {
+                                        "Name": "Field"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "node",
+                                          "tag": "tt:PolygonConfiguration",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Polygon",
+                                              "attrs": {},
+                                              "children": [
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "0",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "0",
+                                                    "y": "576"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "704",
+                                                    "y": "576"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "704",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:PTZConfiguration",
+                      "attrs": {
+                        "token": "PTZConfigurationToken",
+                        "MoveRamp": "0",
+                        "PresetRamp": "0",
+                        "PresetTourRamp": "0"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "PTZConfiguration"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:NodeToken",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "NODE_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultAbsolutePantTiltPositionSpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/PositionGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultAbsoluteZoomPositionSpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/ZoomSpaces/PositionGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultRelativePanTiltTranslationSpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/TranslationGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultRelativeZoomTranslationSpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/ZoomSpaces/TranslationGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultContinuousPanTiltVelocitySpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/VelocityGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultContinuousZoomVelocitySpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/ZoomSpaces/VelocityGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultPTZSpeed",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:PanTilt",
+                              "attrs": {
+                                "x": "0.5",
+                                "y": "0.5",
+                                "space": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/GenericSpeedSpace"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Zoom",
+                              "attrs": {
+                                "x": "0.5",
+                                "space": "http://www.onvif.org/ver10/tptz/ZoomSpaces/ZoomGenericSpeedSpace"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultPTZTimeout",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "PT5S"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:PanTiltLimits",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Range",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:URI",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/PositionGenericSpace"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:XRange",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Min",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "-1.0"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Max",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "1.0"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:YRange",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Min",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "-1.0"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Max",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "1.0"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:ZoomLimits",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Range",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:URI",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "http://www.onvif.org/ver10/tptz/ZoomSpaces/PositionGenericSpace"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:XRange",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Min",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "0.0"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Max",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "1.0"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Extension",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:PTControlDirection",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:EFlip",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Mode",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "OFF"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Reverse",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Mode",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "OFF"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:Extension",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "a"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "node",
+                  "tag": "trt:Profiles",
+                  "attrs": {
+                    "fixed": "true",
+                    "token": "001"
+                  },
+                  "children": [
+                    {
+                      "type": "node",
+                      "tag": "tt:Name",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "subStream"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:VideoSourceConfiguration",
+                      "attrs": {
+                        "token": "V_SRC_000"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "V_SRC_CFG_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:SourceToken",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "V_SRC_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Bounds",
+                          "attrs": {
+                            "height": "1296",
+                            "width": "2304",
+                            "y": "0",
+                            "x": "0"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:AudioSourceConfiguration",
+                      "attrs": {
+                        "token": "A_SRC_CFG_000"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A_SRC_CFG_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:SourceToken",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "AudioSourceToken"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:VideoEncoderConfiguration",
+                      "attrs": {
+                        "token": "001"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "V_ENC_001"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Encoding",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "H264"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Resolution",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Width",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "704"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Height",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "576"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Quality",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:RateControl",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:FrameRateLimit",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "12"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:EncodingInterval",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:BitrateLimit",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "1280"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:H265",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:GovLength",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "24"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:H265Profile",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Main"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Multicast",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Address",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Type",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "IPv4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:IPv4Address",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "239.0.1.0"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Port",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "32002"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:TTL",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "2"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:AutoStart",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "false"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:SessionTimeout",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "PT10S"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:AudioEncoderConfiguration",
+                      "attrs": {
+                        "token": "A_ENC_000"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A_ENC_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Encoding",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "G711"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Bitrate",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "128"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:SampleRate",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "8"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Multicast",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Address",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Type",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "IPv4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:IPv4Address",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "239.0.1.0"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Port",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "32002"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:TTL",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "2"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:AutoStart",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "false"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:SessionTimeout",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "PT10S"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:VideoAnalyticsConfiguration",
+                      "attrs": {
+                        "token": "AnalyticsToken_0"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "VideoAnalytics"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:AnalyticsEngineConfiguration",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:AnalyticsModule",
+                              "attrs": {
+                                "Name": "MyCellMotionModule",
+                                "Type": "tt:CellMotionEngine"
+                              },
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Parameters",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "Sensitivity",
+                                        "Value": "50"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:ElementItem",
+                                      "attrs": {
+                                        "Name": "Layout"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "node",
+                                          "tag": "tt:CellLayout",
+                                          "attrs": {
+                                            "Columns": "7",
+                                            "Rows": "7"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Transformation",
+                                              "attrs": {},
+                                              "children": [
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Translate",
+                                                  "attrs": {
+                                                    "x": "-1.00",
+                                                    "y": "-1.00"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Scale",
+                                                  "attrs": {
+                                                    "x": "0.285714",
+                                                    "y": "0.285714"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:AnalyticsModule",
+                              "attrs": {
+                                "Name": "MyTamperDetecModule",
+                                "Type": "tt:TamperEngine"
+                              },
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Parameters",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "Sensitivity",
+                                        "Value": "0"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:ElementItem",
+                                      "attrs": {
+                                        "Name": "Transformation"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "node",
+                                          "tag": "tt:Transformation",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Translate",
+                                              "attrs": {
+                                                "x": "-1.000000",
+                                                "y": "-1.000000"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Scale",
+                                              "attrs": {
+                                                "x": "0.002841",
+                                                "y": "0.003472"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:ElementItem",
+                                      "attrs": {
+                                        "Name": "Field"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "node",
+                                          "tag": "tt:PolygonConfiguration",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Polygon",
+                                              "attrs": {},
+                                              "children": [
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "0",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "0",
+                                                    "y": "576"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "704",
+                                                    "y": "576"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "704",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:RuleEngineConfiguration",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Rule",
+                              "attrs": {
+                                "Name": "MyMotionDetectorRule",
+                                "Type": "tt:CellMotionDetector"
+                              },
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Parameters",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "MinCount",
+                                        "Value": "5"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "AlarmOnDelay",
+                                        "Value": "100"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "AlarmOffDelay",
+                                        "Value": "100"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "ActiveCells",
+                                        "Value": "+/8AgA=="
+                                      },
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Rule",
+                              "attrs": {
+                                "Name": "MyTamperDetectorRule",
+                                "Type": "tt:TamperDetector"
+                              },
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Parameters",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:ElementItem",
+                                      "attrs": {
+                                        "Name": "Field"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "node",
+                                          "tag": "tt:PolygonConfiguration",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Polygon",
+                                              "attrs": {},
+                                              "children": [
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "0",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "0",
+                                                    "y": "576"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "704",
+                                                    "y": "576"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "704",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:PTZConfiguration",
+                      "attrs": {
+                        "token": "PTZConfigurationToken",
+                        "MoveRamp": "0",
+                        "PresetRamp": "0",
+                        "PresetTourRamp": "0"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "PTZConfiguration"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:NodeToken",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "NODE_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultAbsolutePantTiltPositionSpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/PositionGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultAbsoluteZoomPositionSpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/ZoomSpaces/PositionGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultRelativePanTiltTranslationSpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/TranslationGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultRelativeZoomTranslationSpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/ZoomSpaces/TranslationGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultContinuousPanTiltVelocitySpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/VelocityGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultContinuousZoomVelocitySpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/ZoomSpaces/VelocityGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultPTZSpeed",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:PanTilt",
+                              "attrs": {
+                                "x": "0.5",
+                                "y": "0.5",
+                                "space": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/GenericSpeedSpace"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Zoom",
+                              "attrs": {
+                                "x": "0.5",
+                                "space": "http://www.onvif.org/ver10/tptz/ZoomSpaces/ZoomGenericSpeedSpace"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultPTZTimeout",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "PT5S"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:PanTiltLimits",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Range",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:URI",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/PositionGenericSpace"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:XRange",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Min",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "-1.0"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Max",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "1.0"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:YRange",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Min",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "-1.0"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Max",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "1.0"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:ZoomLimits",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Range",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:URI",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "http://www.onvif.org/ver10/tptz/ZoomSpaces/PositionGenericSpace"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:XRange",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Min",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "0.0"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Max",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "1.0"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Extension",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:PTControlDirection",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:EFlip",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Mode",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "OFF"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Reverse",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Mode",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "OFF"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:Extension",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "a"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "node",
+                  "tag": "trt:Profiles",
+                  "attrs": {
+                    "fixed": "true",
+                    "token": "002"
+                  },
+                  "children": [
+                    {
+                      "type": "node",
+                      "tag": "tt:Name",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "snapStream"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:VideoSourceConfiguration",
+                      "attrs": {
+                        "token": "V_SRC_000"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "V_SRC_CFG_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:SourceToken",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "V_SRC_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Bounds",
+                          "attrs": {
+                            "height": "1296",
+                            "width": "2304",
+                            "y": "0",
+                            "x": "0"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:VideoEncoderConfiguration",
+                      "attrs": {
+                        "token": "002"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "V_ENC_002"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Encoding",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "JPEG"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Resolution",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Width",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "704"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Height",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "576"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Quality",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "4"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:RateControl",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:FrameRateLimit",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "-3600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:EncodingInterval",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "0"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:BitrateLimit",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "512"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Multicast",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Address",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Type",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "IPv4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:IPv4Address",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "239.0.1.0"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Port",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "32002"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:TTL",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "2"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:AutoStart",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "false"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:SessionTimeout",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "PT10S"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:VideoAnalyticsConfiguration",
+                      "attrs": {
+                        "token": "AnalyticsToken_0"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "VideoAnalytics"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:AnalyticsEngineConfiguration",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:AnalyticsModule",
+                              "attrs": {
+                                "Name": "MyCellMotionModule",
+                                "Type": "tt:CellMotionEngine"
+                              },
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Parameters",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "Sensitivity",
+                                        "Value": "50"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:ElementItem",
+                                      "attrs": {
+                                        "Name": "Layout"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "node",
+                                          "tag": "tt:CellLayout",
+                                          "attrs": {
+                                            "Columns": "7",
+                                            "Rows": "7"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Transformation",
+                                              "attrs": {},
+                                              "children": [
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Translate",
+                                                  "attrs": {
+                                                    "x": "-1.00",
+                                                    "y": "-1.00"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Scale",
+                                                  "attrs": {
+                                                    "x": "0.285714",
+                                                    "y": "0.285714"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:AnalyticsModule",
+                              "attrs": {
+                                "Name": "MyTamperDetecModule",
+                                "Type": "tt:TamperEngine"
+                              },
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Parameters",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "Sensitivity",
+                                        "Value": "0"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:ElementItem",
+                                      "attrs": {
+                                        "Name": "Transformation"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "node",
+                                          "tag": "tt:Transformation",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Translate",
+                                              "attrs": {
+                                                "x": "-1.000000",
+                                                "y": "-1.000000"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Scale",
+                                              "attrs": {
+                                                "x": "0.002841",
+                                                "y": "0.003472"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:ElementItem",
+                                      "attrs": {
+                                        "Name": "Field"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "node",
+                                          "tag": "tt:PolygonConfiguration",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Polygon",
+                                              "attrs": {},
+                                              "children": [
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "0",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "0",
+                                                    "y": "576"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "704",
+                                                    "y": "576"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "704",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:RuleEngineConfiguration",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Rule",
+                              "attrs": {
+                                "Name": "MyMotionDetectorRule",
+                                "Type": "tt:CellMotionDetector"
+                              },
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Parameters",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "MinCount",
+                                        "Value": "5"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "AlarmOnDelay",
+                                        "Value": "100"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "AlarmOffDelay",
+                                        "Value": "100"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:SimpleItem",
+                                      "attrs": {
+                                        "Name": "ActiveCells",
+                                        "Value": "+/8AgA=="
+                                      },
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Rule",
+                              "attrs": {
+                                "Name": "MyTamperDetectorRule",
+                                "Type": "tt:TamperDetector"
+                              },
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Parameters",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:ElementItem",
+                                      "attrs": {
+                                        "Name": "Field"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "node",
+                                          "tag": "tt:PolygonConfiguration",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "type": "node",
+                                              "tag": "tt:Polygon",
+                                              "attrs": {},
+                                              "children": [
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "0",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "0",
+                                                    "y": "576"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "704",
+                                                    "y": "576"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "node",
+                                                  "tag": "tt:Point",
+                                                  "attrs": {
+                                                    "x": "704",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:PTZConfiguration",
+                      "attrs": {
+                        "token": "PTZConfigurationToken",
+                        "MoveRamp": "0",
+                        "PresetRamp": "0",
+                        "PresetTourRamp": "0"
+                      },
+                      "children": [
+                        {
+                          "type": "node",
+                          "tag": "tt:Name",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "PTZConfiguration"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:UseCount",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:NodeToken",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "NODE_000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultAbsolutePantTiltPositionSpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/PositionGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultAbsoluteZoomPositionSpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/ZoomSpaces/PositionGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultRelativePanTiltTranslationSpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/TranslationGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultRelativeZoomTranslationSpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/ZoomSpaces/TranslationGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultContinuousPanTiltVelocitySpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/VelocityGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultContinuousZoomVelocitySpace",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "http://www.onvif.org/ver10/tptz/ZoomSpaces/VelocityGenericSpace"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultPTZSpeed",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:PanTilt",
+                              "attrs": {
+                                "x": "0.5",
+                                "y": "0.5",
+                                "space": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/GenericSpeedSpace"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "node",
+                              "tag": "tt:Zoom",
+                              "attrs": {
+                                "x": "0.5",
+                                "space": "http://www.onvif.org/ver10/tptz/ZoomSpaces/ZoomGenericSpeedSpace"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:DefaultPTZTimeout",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "PT5S"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:PanTiltLimits",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Range",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:URI",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "http://www.onvif.org/ver10/tptz/PanTiltSpaces/PositionGenericSpace"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:XRange",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Min",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "-1.0"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Max",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "1.0"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:YRange",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Min",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "-1.0"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Max",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "1.0"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:ZoomLimits",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:Range",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:URI",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "http://www.onvif.org/ver10/tptz/ZoomSpaces/PositionGenericSpace"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:XRange",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Min",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "0.0"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Max",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "1.0"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "node",
+                          "tag": "tt:Extension",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "node",
+                              "tag": "tt:PTControlDirection",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "node",
+                                  "tag": "tt:EFlip",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Mode",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "OFF"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "node",
+                                  "tag": "tt:Reverse",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "type": "node",
+                                      "tag": "tt:Mode",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "OFF"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "node",
+                      "tag": "tt:Extension",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "a"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

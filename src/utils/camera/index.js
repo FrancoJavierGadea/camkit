@@ -1,36 +1,5 @@
 import { CameraInfo } from "./CameraInfo.js";
 import { XMLParser } from "../xml/XMLParser.js";
-import { CameraFinder } from "./CameraFinder/OnvifDiscovery.js";
-
-
-//MARK: findCameras
-export async function findCamerasByBroadcast(params) {
-    
-    const {localAddress, timeout = 5000, logs = false} = params;
-
-    const finder = new CameraFinder({ localAddress });
-
-    try {
-        
-        const cameras = await finder.find({timeout, logs});
-
-        const results = new Map();
-
-        for(const [ip, xml] of cameras) {
-
-            const address = await XMLParser.getTextValues(xml, (tag) => tag.endsWith('XAddrs'));
-
-            results.set(ip, [...address.values()].at(0));
-        }
-
-        return results;
-    } 
-    catch(error) {
-        
-        console.log(error);
-    }
-}
-
 
 //MARK: getDiviceInfo
 export async function getDiviceInfo(params = {}){

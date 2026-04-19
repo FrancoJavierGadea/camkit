@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:enc="http://www.w3.org/2003/05/soap-encoding" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+    xmlns:wsa5="http://www.w3.org/2005/08/addressing"
+    xmlns:d="http://schemas.xmlsoap.org/ws/2005/04/discovery"
+    xmlns:dn="http://www.onvif.org/ver10/network/wsdl" xmlns:tt="http://www.onvif.org/ver10/schema"
+    xmlns:tds="http://www.onvif.org/ver10/device/wsdl">
+    <s:Header>
+        <wsa:MessageID>uuid:6ed50ee0-b4c2-3178-0d67-00:13:00:A1:30:A1</wsa:MessageID>
+        <wsa:RelatesTo>uuid:0f714fc8-6417-4a94-aac9-c2c601110068</wsa:RelatesTo>
+        <wsa:To>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</wsa:To>
+        <wsa:Action>http://schemas.xmlsoap.org/ws/2005/04/discovery/ProbeMatches</wsa:Action>
+    </s:Header>
+    <s:Body>
+        <d:ProbeMatches>
+            <d:ProbeMatch>
+                <wsa:EndpointReference>
+                    <wsa:Address>urn:uuid:2fe6f03e-5566-7788-99aa-001300a130a1</wsa:Address>
+                </wsa:EndpointReference>
+                <d:Types>dn:NetworkVideoTransmitter tds:Device</d:Types>
+                <d:Scopes>onvif://www.onvif.org/type/video_encoder
+                    onvif://www.onvif.org/type/audio_encoder
+                    onvif://www.onvif.org/hardware/IPC-model
+                    onvif://www.onvif.org/location/country/china onvif://www.onvif.org/name/NVT
+                    onvif://www.onvif.org/Profile/Streaming
+                    onvif://www.onvif.org/A1C2B3/mac/00:13:00:a1:30:a1
+                    onvif://www.onvif.org/Profile/T</d:Scopes>
+                <d:XAddrs>http://192.168.100.236:8899/onvif/device_service</d:XAddrs>
+                <d:MetadataVersion>1</d:MetadataVersion>
+            </d:ProbeMatch>
+        </d:ProbeMatches>
+    </s:Body>
+</s:Envelope>

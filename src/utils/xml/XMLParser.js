@@ -162,7 +162,7 @@ export class XMLParser {
                     children: [],
                     //parent
                 };
-                
+
                 parent.children.push(node);
 
                 if(!isSelfClosing) tagStack.push(node);
@@ -189,7 +189,7 @@ export class XMLParser {
     }
 
     //MARK: Get
-    static getNode(tree, predicate = () => {}){
+    static getNode(tree, predicate = () => true){
 
         if(tree.type === 'node' && predicate(tree)) return tree;
 
@@ -204,6 +204,28 @@ export class XMLParser {
         }
           
         return null;
+    }
+
+    static getNodes(tree, predicate = () => true){
+
+        const results = [];
+
+        const pushNodes = (tree) => {
+
+            if(tree.type === 'node' && predicate(tree)) results.push(tree);
+
+            if((tree.type === 'node' || tree.type === 'root') && Array.isArray(tree.children)) {
+
+                for(const child of tree.children) {
+
+                pushNodes(child);
+                }
+            }
+        }
+
+        pushNodes(tree);
+
+        return results;
     }
 }
 

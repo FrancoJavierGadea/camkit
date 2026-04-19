@@ -1,24 +1,33 @@
 
-import { findCamerasByIP } from "./utils/camera/CameraFinder/findCamerasByIP.js";
-import { findCamerasByBroadcast, getCapabilities, getDiviceInfo, getProfiles } from "./utils/camera/index.js";
+import { getCapabilities, getDiviceInfo, getProfiles } from "./utils/camera/index.js";
+import { CameraFinder } from "./utils/camera/CameraFinder/index.js";
+
+const HOST_IP = '192.168.100.188';
+const CAMERA_IP = '192.168.100.236';
 
 
-// const results = await findCamerasByIP({
-//     minX: 90,
-//     maxX: 120,
-//     minY: 1,
-//     maxY: 254,
-//     ip_base: "192.168",
+// const results = await CameraFinder.findByScan({
+//     scanner: {
+//         minX: 100,
+//         maxX: 100,
+//         minY: 1,
+//         maxY: 254,
+//         ip_base: '192.168'
+//     },
+//     timeout: 20000,
+//     logs: true
 // });
+//console.log(results);
 
-// const results = await findCamerasByBroadcast({
-//     localAddress: "192.168.100.188",
+// const results = await CameraFinder.findByBroadcast({
+//     localAddress: HOST_IP,
 //     timeout: 10000,
 //     logs: true
 // });
+// console.log(results);
 
 
-const IP = '192.168.100.236';
+
 
 
 // const info = await getDiviceInfo({
@@ -32,10 +41,10 @@ const IP = '192.168.100.236';
 // console.log(capabilities);
 
 
-const profiles = await getProfiles({
-    ip: IP
-});
-console.log(profiles);
+// const profiles = await getProfiles({
+//     ip: CAMERA_IP
+// });
+// console.log(profiles);
 
 
 

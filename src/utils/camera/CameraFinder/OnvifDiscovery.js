@@ -154,3 +154,5 @@ export class OnvifDiscovery {
         this.#results = null;
     }
 }
+
+export default OnvifDiscovery;

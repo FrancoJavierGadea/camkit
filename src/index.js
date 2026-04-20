@@ -1,6 +1,9 @@
 
-import { getCapabilities, getDiviceInfo, getProfiles } from "./utils/camera/index.js";
-import { CameraFinder } from "./utils/camera/CameraFinder/index.js";
+
+import { CameraFinder } from "./CameraFinder/index.js";
+import { OnvifDevice } from "./onvif/OnvifDevice.js";
+import * as Extractors from "./extractors/index.js";
+
 
 const HOST_IP = '192.168.100.188';
 const CAMERA_IP = '192.168.100.236';
@@ -28,23 +31,20 @@ const CAMERA_IP = '192.168.100.236';
 
 
 
+const camera = new OnvifDevice({
+    ip: CAMERA_IP
+});
 
 
-// const info = await getDiviceInfo({
-//     ip: "192.168.100.234"
-// });
-//console.log(info);
+// const info = await Extractors.getDiviceInfo(camera);
+// console.log(info);
 
-// const capabilities = await getCapabilities({
-//     ip: "192.168.100.234"
-// });
-// console.log(capabilities);
+// const capabilities = await Extractors.getCapabilities(camera);
+// console.log(JSON.stringify(capabilities, null, 2));
 
 
-// const profiles = await getProfiles({
-//     ip: CAMERA_IP
-// });
-// console.log(profiles);
+const profiles = await Extractors.getProfiles(camera);
+console.log(JSON.stringify([...profiles.values()], null, 2));
 
 
 

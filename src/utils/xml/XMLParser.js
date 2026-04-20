@@ -1,9 +1,9 @@
 
 
 
-export class XMLParser {
+export const XMLParser = {
 
-    static async scan(xml, handlers = {}){
+    async scan(xml, handlers = {}){
 
         let i = 0;
 
@@ -60,9 +60,9 @@ export class XMLParser {
                 i = next === -1 ? xml.length : next;
             }
         }
-    }
+    },
 
-    static async getTextValues(xml, tag){
+    async getTextValues(xml, tag){
 
         const result = new Map();
 
@@ -100,11 +100,11 @@ export class XMLParser {
         });
 
         return result;
-    }
+    },
 
 
     //MARK: Parse to AST
-    static parse(xml){
+    parse(xml){
 
         let i = 0;
 
@@ -186,10 +186,10 @@ export class XMLParser {
         }
 
         return root;
-    }
+    },
 
     //MARK: Get
-    static getNode(tree, predicate = () => true){
+    getNode(tree, predicate = () => true){
 
         if(tree.type === 'node' && predicate(tree)) return tree;
 
@@ -204,9 +204,9 @@ export class XMLParser {
         }
           
         return null;
-    }
+    },
 
-    static getNodes(tree, predicate = () => true){
+    getNodes(tree, predicate = () => true){
 
         const results = [];
 
@@ -218,7 +218,7 @@ export class XMLParser {
 
                 for(const child of tree.children) {
 
-                pushNodes(child);
+                    pushNodes(child);
                 }
             }
         }
@@ -226,6 +226,82 @@ export class XMLParser {
         pushNodes(tree);
 
         return results;
+    },
+
+    getNodeAt(tree, ...predicates){
+
+        // accepts both getNodeAt(tree, p1, p2) and getNodeAt(tree, [p1, p2])
+        const preds = Array.isArray(predicates[0]) ? predicates[0] : predicates;
+
+        if(preds.length === 0) return tree;
+
+        const [head, ...tail] = preds;
+
+        const node = this.getNode(tree, head);
+
+        if(!node) return null;
+        if(tail.length === 0) return node;
+
+        for(const child of node.children){
+
+            const result = this.getNodeAt(child, tail);
+
+            if(result) return result;
+        }
+
+        return null;
+    },
+
+    getText(tree, ...predicates){
+
+        const node = this.getNodeAt(tree, predicates);
+
+        const child = node?.children.at(-1);
+
+        if(child?.type === 'text') return child.value;
+
+        return null;
+    },
+
+    getAttrs(tree, ...predicates){
+
+        const node = this.getNodeAt(tree, predicates);
+
+        return node?.attrs ?? null;
+    },
+
+    toNumber(attrs, ...keys){
+
+        let k = Array.isArray(keys[0]) ? keys[0] : keys;
+
+        if(k.length === 0) k = Object.keys(attrs);
+
+        const cloned = {...attrs};
+
+        for(const key of k) cloned[key] = Number(attrs[key]);
+
+        return cloned;
+    },
+
+    toBoolean(attrs, ...keys){
+
+        let k = Array.isArray(keys[0]) ? keys[0] : keys;
+
+        if(k.length === 0) k = Object.keys(attrs);
+
+        const cloned = {...attrs};
+
+        for(const key of k){
+            
+            if(typeof attrs[key] === 'string'){
+                cloned[key] = attrs[key].toLowerCase() === 'true';
+            }
+            else {
+                cloned[key] = Boolean(attrs[key]);
+            }
+        }
+
+        return cloned;
     }
 }
 

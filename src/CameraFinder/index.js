@@ -1,6 +1,6 @@
-import XMLParser from "../../xml/XMLParser.js";
+import XMLParser from "../utils/xml/XMLParser.js";
 import CameraScanner from "./CameraScanner.js";
-import OnvifDiscovery from "./OnvifDiscovery.js";
+import OnvifDiscovery from "../onvif/OnvifDiscovery.js";
 
 
 export const CameraFinder = {
@@ -59,8 +59,6 @@ export const CameraFinder = {
             const cameras = await scannerInstance.scan({logs});
 
             if(timeoutID) clearTimeout(timeoutID);
-
-            console.log(cameras);
 
             return cameras;
         }

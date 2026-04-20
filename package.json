@@ -1,16 +1,28 @@
 {
-	"name": "camera-controls",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"type": "module",
-	"bin": {
-		"find-camera": "./scripts/find-camera.js"
-	}
+    "name": "camkit",
+    "version": "0.0.1-alpha.1",
+    "description": "ONVIF camera toolkit for Node.js — stream, control and extract data from IP cameras",
+    "keywords": ["onvif", "camera", "ipcam", "ptz", "rtsp", "streaming", "surveillance" ],
+    "author": "Franco Javier Gadea",
+    "license": "MIT",
+    "type": "module",
+    "main": "index.js",
+	"scripts": {},
+    "bin": {
+        "find-camera": "./scripts/find-camera.js"
+    },
+	"repository": {
+        "type": "git",
+        "url": "https://github.com/FrancoJavierGadea/camkit.git"
+    },
+    "bugs": {
+        "url": "https://github.com/FrancoJavierGadea/camkit/issues"
+    },
+    "homepage": "https://github.com/FrancoJavierGadea/camkit#readme",
+    "publishConfig": {
+        "tag": "alpha"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
 }

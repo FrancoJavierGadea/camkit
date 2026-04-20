@@ -1,5 +1,6 @@
 import OnvifService from "./OnvifService.js";
-import { ONVIF_SOAP_ACTION } from "./Actions.js";
+import { ONVIF_SOAP_ACTION } from "./constants/Actions.js";
+import ONVIF_STREAM_PROTOCOL from "./constants/Protocols.js";
 
 
 export class OnvifDevice extends OnvifService {
@@ -71,7 +72,7 @@ export class OnvifDevice extends OnvifService {
         });
     }
 
-    //Profiles
+    //MARK: Profiles
     async getProfiles(params = {}) {
 
         const { ip, port, timeout, path } = this.buildRequest(params);
@@ -93,6 +94,73 @@ export class OnvifDevice extends OnvifService {
             url,
             soapRequest,
             soapAction: ONVIF_SOAP_ACTION.MEDIA.GET_PROFILES,
+            timeout
+        });
+    }
+
+    //MARK: StreamUri
+    async getStreamUri(profileToken, params = {}) {
+
+        if(profileToken == null) throw new Error('A profileToken is required');
+        
+        const { ip, port, timeout, path } = this.buildRequest(params);
+        const { protocol = ONVIF_STREAM_PROTOCOL.RTSP } = params;
+
+        const url = this.buildUrl(path, {ip, port});
+
+        const soapRequest = /*xml*/`
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soap:Envelope
+            xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:trt="http://www.onvif.org/ver10/media/wsdl"
+            xmlns:tt="http://www.onvif.org/ver10/schema">
+            <soap:Body>
+                <trt:GetStreamUri>
+                    <trt:StreamSetup>
+                        <tt:Stream>RTP-Unicast</tt:Stream>
+                        <tt:Transport>
+                            <tt:Protocol>${protocol}</tt:Protocol>
+                        </tt:Transport>
+                    </trt:StreamSetup>
+                    <trt:ProfileToken>${profileToken}</trt:ProfileToken>
+                </trt:GetStreamUri>
+            </soap:Body>
+        </soap:Envelope>
+        `;
+
+        return await this.request({
+            url,
+            soapRequest,
+            soapAction: ONVIF_SOAP_ACTION.MEDIA.GET_STREAM_URI,
+            timeout
+        });
+    }
+
+    async getSnapshotUri(profileToken, params = {}) {
+
+        if(profileToken == null) throw new Error('A profileToken is required');
+        
+        const { ip, port, timeout, path } = this.buildRequest(params);
+
+        const url = this.buildUrl(path, {ip, port});
+
+        const soapRequest = /*xml*/`
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soap:Envelope
+            xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+            xmlns:trt="http://www.onvif.org/ver10/media/wsdl">
+            <soap:Body>
+                <trt:GetSnapshotUri>
+                    <trt:ProfileToken>${profileToken}</trt:ProfileToken>
+                </trt:GetSnapshotUri>
+            </soap:Body>
+        </soap:Envelope>
+        `;
+
+        return await this.request({
+            url,
+            soapRequest,
+            soapAction: ONVIF_SOAP_ACTION.MEDIA.GET_SNAPSHOT_URI,
             timeout
         });
     }

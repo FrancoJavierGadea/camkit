@@ -1,6 +1,7 @@
 import XMLParser from "../utils/xml/XMLParser.js";
 import { Tag } from "../utils/xml/nodesUtils.js";
 import { Cast } from "../utils/xml/ObjectUtils.js";
+import { ENCODING } from "../onvif/constants/Encodings.js";
 
 
 export async function getProfiles(onvifDevice, params = {}) {
@@ -112,6 +113,10 @@ export async function getProfiles(onvifDevice, params = {}) {
                 })
             };
         }
+
+        //Detect snapshots profile
+        result.isSnapshot = Object.values(ENCODING.SNAPSHOT).includes(result.videoEncoder.encoding) 
+            || result.videoEncoder.rateControl?.frameRateLimit < 0;
             
         results.set(result.token, result);
     }

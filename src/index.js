@@ -3,6 +3,7 @@
 import { CameraFinder } from "./CameraFinder/index.js";
 import { OnvifDevice } from "./onvif/OnvifDevice.js";
 import * as Extractors from "./extractors/index.js";
+import ONVIF_STREAM_PROTOCOL from "./onvif/constants/Protocols.js";
 
 
 const HOST_IP = '192.168.100.188';
@@ -46,7 +47,26 @@ const camera = new OnvifDevice({
 const profiles = await Extractors.getProfiles(camera);
 console.log(JSON.stringify([...profiles.values()], null, 2));
 
+// const profileToken =  [...profiles.keys()].at(0);
 
+// const streamUri = await Extractors.getStreamUri(camera, profileToken);
+// console.log(streamUri);
+
+
+for(const profile of profiles.values()) {
+    
+    if(profile.isSnapshot){
+        const snapshotUri = await Extractors.getSnapshotUri(camera, profile.token);
+        console.log(snapshotUri);
+    }
+    else {
+
+        const streamUri = await Extractors.getStreamUri(camera, profile.token, {
+            protocol: ONVIF_STREAM_PROTOCOL.HTTP
+        });
+        console.log(streamUri);
+    }
+}
 
 
 

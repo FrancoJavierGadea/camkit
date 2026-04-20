@@ -34,3 +34,5 @@ export const ONVIF_SOAP_ACTION = {
         REMOVE_PRESET: 'http://www.onvif.org/ver20/ptz/wsdl/RemovePreset'
     }
 };
+
+export default ONVIF_SOAP_ACTION;

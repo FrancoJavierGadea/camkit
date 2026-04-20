@@ -1,5 +1,28 @@
+import { XMLUtils } from "./XMLUtils.js";
 
 export const Cast = {
+
+    unescapeXML(attrs, ...keys) {
+
+        let k = Array.isArray(keys[0]) ? keys[0] : keys;
+
+        if(k.length === 0) k = Object.keys(attrs);
+
+        const cloned = {...attrs};
+
+        for(const key of k){
+
+            if(Object.hasOwn(attrs, key)) {
+
+                console.log(attrs[key]);
+
+                //unescape
+                cloned[key] = XMLUtils.unescapeXML(attrs[key]);
+            }
+        }
+
+        return cloned;
+    },
 
     toNumber(attrs, ...keys){
 
@@ -10,7 +33,7 @@ export const Cast = {
         const cloned = {...attrs};
 
         for(const key of k){
-            
+
             if(Object.hasOwn(attrs, key)) {
                 cloned[key] = Number(attrs[key]);
             }

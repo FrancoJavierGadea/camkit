@@ -1,5 +1,5 @@
 
-import { ONVIF_SOAP_ACTION } from './Actions.js';
+import { ONVIF_SOAP_ACTION } from './constants/Actions.js';
 import { WSSecurity } from './auth.js';
 
 

@@ -1,20 +1,22 @@
 
 
-export function parseArgs(config, argv){
+export function parseArgs(options, args){
+
+    if(!options || !args || !args.length === 0) return null;
 
     const result = {};
 
     // valores por defecto
-    for(const key in config) {
-        result[key] = config[key].defaultValue;
+    for(const key in options) {
+        result[key] = options[key].defaultValue;
     }
 
-    for (let i = 2; i < argv.length; i++) {
+    for(let i = 0; i < args.length; i++) {
 
-        const arg = argv[i];
+        const arg = args[i];
 
-        for(const key in config) {
-            const aliases = config[key].alias;
+        for(const key in options) {
+            const aliases = options[key].alias;
 
             // --param=value
             const matchedAlias = aliases.find(alias => arg === alias || arg.startsWith(alias + '='));
@@ -25,7 +27,7 @@ export function parseArgs(config, argv){
                     result[key] = arg.split('=')[1];
                 } 
                 else {
-                    const next = argv[i + 1];
+                    const next = args[i + 1];
 
                     if(next && !next.startsWith('-')){
                         result[key] = next;
@@ -36,6 +38,12 @@ export function parseArgs(config, argv){
                     }
                 }
             }
+        }
+    }
+
+    for(const key in options) {
+        if(options[key].required && result[key] == null){
+            throw new Error(`Missing required parameter: ${key} (${options[key].alias.join(', ')})`);
         }
     }
 

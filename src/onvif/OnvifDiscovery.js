@@ -1,12 +1,59 @@
 import dgram from "node:dgram";
 import crypto from "node:crypto";
 
+/**
+ * @typedef {Object} OnvifDiscoveryConstructorParams
+ * @property {string} localAddress - Required: Local IP address to bind the socket.
+ * @property {string} [multicast_ip] - Multicast IP address to send the probe (default: '239.255.255.250')
+ * @property {number} [port] - Port number to send the probe (default: 3702)
+ * @property {number} [timeout] - Discovery timeout in milliseconds (default: 3000)
+ */
+/**
+ * Current discovery results:
+ * IP address -> raw XML response
+ * 
+ * @typedef {Map<string, string>} OnvifDiscoveryResults
+ */
+/**
+ * Supported ONVIF discovery event names.
+ * 
+ * @typedef {'probe-sent' | 'device-found' | 'error' | 'timeout' | 'close'} OnvifDiscoveryEventName
+ */
+/**
+ * Event payload for ONVIF discovery events.
+ * 
+ * @typedef {Object} OnvifDiscoveryEventDetail
+ * @property {string} ip - Device IP address.
+ * @property {string} xml - Raw XML response from the device.
+ * @property {OnvifDiscoveryResults} results - Current discovered devices.
+ */
+/**
+ * Custom event emitted during the discovery process.
+ * 
+ * @typedef {CustomEvent<OnvifDiscoveryEventDetail>} OnvifDiscoveryEvent
+ */
+/**
+ * Event listener callback for discovery events.
+ * 
+ * @typedef {(event: OnvifDiscoveryEvent) => void} OnvifDiscoveryEventHandler
+ */
 
+
+//MARK: OnvifDiscovery
 export class OnvifDiscovery {
 
     static defaults = {
-        MULTICAST_IP: '239.255.255.250',
-        PORT: 3702
+        multicast_ip: '239.255.255.250',
+        port: 3702,
+        timeout: 3000
+    };
+
+    static events = {
+        PROBE_SENT: 'probe-sent',
+        DEVICE_FOUND: 'device-found',
+        ERROR: 'error',
+        TIMEOUT: 'timeout',
+        CLOSE: 'close'
     };
 
     #socket;
@@ -16,25 +63,38 @@ export class OnvifDiscovery {
     #results;
     #settled = false;
 
+    /** @param {OnvifDiscoveryConstructorParams} params */
     constructor(params = {}){
 
         const defaults = this.constructor.defaults;
-        const {
-            multicast_ip,
-            port,
-            localAddress,
-        } = params;
+
+        Object.assign(this, defaults, params);
+
+        const {localAddress} = params;
 
         if(!localAddress) throw new Error('OnvifDiscovery: localAddress is required');
 
         this.localAddress = localAddress;
-
-        this.multicast_ip = multicast_ip ?? defaults.MULTICAST_IP;
-        this.port = port ?? defaults.PORT;
     }
 
     //MARK: Find
-    async find({timeout = 3000, logs = false} = {}){
+    /**
+     * Starts the ONVIF discovery process by sending a WS-Discovery probe
+     * over UDP multicast and collecting responses from compatible devices.
+     *
+     * During the discovery lifecycle, events such as `'probe-sent'`,
+     * `'device-found'`, `'error'`, `'timeout'`, and `'close'` may be emitted.
+     *
+     * Resolves with a map of discovered devices where:
+     * IP address -> raw XML discovery response.
+     *
+     * @param {{ timeout?: number }} [params] - Optional discovery settings.
+     * @returns {Promise<OnvifDiscoveryResults>} A promise that resolves with all discovered devices.
+     */
+    async find(params = {}){
+
+        const E = OnvifDiscovery.events;
+        const {timeout = this.timeout} = params;
 
         if(this.#socket) return this.#promise.promise;
 
@@ -66,24 +126,25 @@ export class OnvifDiscovery {
 
             const ip = remoteInfo.address;
 
-            if(logs) console.log("📡 Device found:", ip);
-
+ 
+ 
             const xml = message.toString();
 
-            if (!this.#results.has(ip)) this.#results.set(ip, xml);
+            if(!this.#results.has(ip)) this.#results.set(ip, xml);
 
-            this.#eventTarget.dispatchEvent(new CustomEvent('device-found', {
+            //MARK: Device found
+            this.#eventTarget.dispatchEvent(new CustomEvent(E.DEVICE_FOUND, {
                 detail: {
                     ip,
                     xml,
-                    founded: new Map(this.#results)
+                    results: new Map(this.#results)
                 }
             }));
         });
 
         this.#socket.on("error", (err) => {
 
-            if(logs) console.error("Error en el socket:", err);
+            this.#eventTarget.dispatchEvent(new CustomEvent(E.ERROR, {detail: err}));
 
             this.#promise.reject(err);
             this.#settled = true;
@@ -100,7 +161,8 @@ export class OnvifDiscovery {
             this.#socket.send(buffer, 0, buffer.length, this.port, this.multicast_ip, (err) => {
 
                 if(err){
-                    if(logs) console.error("Error al enviar el mensaje:", err);
+                    //MARK: Error
+                    this.#eventTarget.dispatchEvent(new CustomEvent(E.ERROR, {detail: err}));
                     
                     this.#promise.reject(err);
                     this.#settled = true;
@@ -108,15 +170,15 @@ export class OnvifDiscovery {
                     return;
                 }
 
-                if(logs) console.log("🚀 ONVIF probe sent");
-                this.#eventTarget.dispatchEvent(new CustomEvent('probe-sent'));
+                //MARK: Probe sent
+                this.#eventTarget.dispatchEvent(new CustomEvent(E.PROBE_SENT));
             });
         });
 
         this.#timeoutId = setTimeout(() => {
 
             this.close();
-            this.#eventTarget.dispatchEvent(new CustomEvent('timeout'));
+            this.#eventTarget.dispatchEvent(new CustomEvent(E.TIMEOUT));
 
         }, timeout);
 
@@ -124,14 +186,31 @@ export class OnvifDiscovery {
     }
 
     //MARK: Events
+    /**
+     * @param {OnvifDiscoveryEventName} event 
+     * @param {OnvifDiscoveryEventHandler} handler 
+     */
     on(event, handler){
         this.#eventTarget.addEventListener(event, handler);
     }
+    /**
+     * @param {OnvifDiscoveryEventName} event 
+     * @param {OnvifDiscoveryEventHandler} handler 
+     */
     off(event, handler){
         this.#eventTarget.removeEventListener(event, handler);
     }
 
+    /**
+     * Stops the discovery process, closes the UDP socket,
+     * clears the timeout, and releases internal resources.
+     *
+     * If a discovery operation is still pending, the promise is resolved
+     * with the devices found so far before emitting the `'close'` event.
+     */
     close(){
+        const E = OnvifDiscovery.events;
+
         if(!this.#socket) return;
 
         try {
@@ -141,7 +220,7 @@ export class OnvifDiscovery {
 
         if(this.#timeoutId) clearTimeout(this.#timeoutId);
 
-        this.#eventTarget.dispatchEvent(new CustomEvent('close'));
+        this.#eventTarget.dispatchEvent(new CustomEvent(E.CLOSE));
 
         if(this.#promise && !this.#settled){
             this.#promise.resolve(this.#results);
